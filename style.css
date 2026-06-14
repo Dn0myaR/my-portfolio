@@ -229,6 +229,14 @@ section{
     transform: scale(1.1);
 }
 
+.socials a{
+  color: black !important;            
+  text-decoration: none;  
+}
+.socials a:hover {
+  color: #333;             /* optional: darker shade on hover */
+}
+
 .section-title{
     text-align: center;
     font-size: 4rem;
