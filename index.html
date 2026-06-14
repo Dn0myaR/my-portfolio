@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<body class="mainbody" background="./Profile Img/bgmain.png">
+    
+    <header class="mainheader" >
+        <!-- <a href="#" class="logo"><span>Raymond Sereño</span></a> -->
+
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#projects">Project</a>
+            </li>
+            <li>
+                <a href="#contacts">Contact</a>
+            </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <button class="visit-btn">Visit GitHub</button>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="./Profile Img/mypics2.png" alt="">
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Raymond Sereño</h1>
+                    <span>
+                       a full‑stack web developer with experience in <b>Laravel, 
+                        Vue, JavaScript, HTML, and CSS</b>. In my first company role, I applied these technologies 
+                        to build systems that supported daily operations — from monitoring installed software on 
+                        company laptops and CPUs to streamlining office supply requests and replenishment, as well 
+                        as tracking incoming and outgoing materials. I enjoy learning and applying modern frameworks 
+                        to create solutions that make work more efficient.
+                    </span>
+                </div>
+                <div class="btn-group">
+                    <div class="btn">Download CV</div>
+                    <div class="btn">Contact</div>
+                </div>
+
+                <div class="socials">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>  
+    </section>
+    
+    <section class="experience" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer – HRD Singapore Pte., Ltd. (2023 – Present)</h3>
+                    <br/>
+                    <p><h3>Developed and maintained internal systems using Laravel, Vue.js, JavaScript, HTML, and CSS.</h3></p>
+                    <br/>
+                    <ul>
+                        <li>
+                            <b>◉ PC Management System</b> – monitoring installed software across company devices.
+                        </li>
+                        <br/>
+                        <li>
+                            <b>◉ Office Supplies Inventory System</b> – streamlining employee requests, tracking costs, and managing stock levels.
+                        </li>
+                         <br/>
+                        <li>
+                            <b>◉ Material Gatepass System</b> – recording and monitoring equipment repairs with printable PDF gatepasses.
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- <img src="mypics2.png" alt=""> -->
+        </div>
+        <h2 class="section-skill">Development Stack</h2>
+        <div class="grid-language">
+            <ul>
+                <li><img src="./Language Icon/js.png"><br/><b>JavaScript</b></li>
+                <li><img src="./Language Icon/html.png"><br/><b>HTML</b></li>
+                <li><img src="./Language Icon/css-3.png"><br/><b>CSS</b></li>
+                <li><img src="./Language Icon/vue.png"><br/><b>VUE</b></li>
+                <li><img src="./Language Icon/Laravel.png"><br/><b>Laravel</b></li>
+                <li><img src="./Language Icon/php.png"><br/><b>PHP</b></li>
+            </ul>
+        </div>
+
+        
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="section-title">Recent Project</h2>
+        <div class="projects-grid">
+            <div class="projects-card">
+                <img src="./ProjectImg/PCMS/main page.jpg" alt="">
+                <h3>PC Management</h3>
+                <p>PC Management System designed to monitor every company laptop and desktop, tracking all installed software 
+                    against each team’s standard list.
+
+                </p>
+                <div class="btn-group">
+                    <div onclick="window.location.href='projectPCM.html'" class="btn">More Details</div>
+                    <!-- <div class="btn">GitHub Repo</div> -->
+                </div>
+            </div>
+            <div class="projects-card">
+                <img src="project 2.webp" alt="">
+                <h3>Material Gatepass</h3>
+                <p>Material Gatepass System that digitizes the manual process of tracking materials entering and leaving the building. 
+                    Instead of relying on printed templates and handwritten records. 
+                </p>
+                <div class="btn-group">
+                    <div onclick="window.location.href='projectOSI.html'" class="btn">More Details</div>
+                    <!-- <div class="btn">GitHub Repo</div> -->
+                </div>
+            </div>
+            <div class="projects-card">
+                <img src="project 3.webp" alt="">
+                <h3>Office Supplies Inventory</h3>
+                <p> The system records costs at the team, section, and department levels, generates monthly cost graphs, highlights 
+                    frequently requested or fast‑depleting items, and manages surrendered supplies by categorizing them as disposable 
+                    or second‑hand (with zero cost). 
+                </p>
+                <div class="btn-group">
+                    <div onclick="window.location.href='projectGatepass.html'" class="btn">More Details</div>
+                    <!-- <div class="btn">GitHub Repo</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="input-box">
+            <h2 class="section-title">Connect with me</h2>
+            <h3>Let’s chat. Drop a message!</h3>
+
+            <form action="connectwithme.php" method="POST" > 
+                <div class="contact-name">
+                    <input type="text" name="name" placeholder="Please input your name" required>
+                </div>
+                <div class="contact-email">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="contact-message">
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Messsage</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#projects">Project</a>
+            </li>
+            <li>
+                <a href="#contacts">Contact</a>
+            </li>
+        </ul>
+        <div class="copyright">© All right reserve | Raymond Sereño</div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
