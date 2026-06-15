@@ -51,8 +51,15 @@
                 </div>
                 <div class="btn-group">
                     <!-- <iframe src="assets/RaymondCV.pdf" width="100%" height="600px"></iframe> -->
-                    <a href="assets/RaymondCV.docx" class="btn" download><div   >Download CV</div></a>
-                    <a href="#contacts"><div class="btn">Contact</div></a>
+                    <!-- <a href="assets/RaymondCV.docx" class="btn" download><div   >Download CV</div></a>
+                    <a href="#contacts"><div class="btn">Contact</div></a> -->
+                    
+                        <select id="cv-select" class="cv-selects btn" onchange="window.location.href=this.value">
+                            <option value=""><div class="btn">-- Download CV --</div></option>
+                            <option value="assets/RaymondCV.pdf">PDF Version</option>
+                            <option value="assets/RaymondCV.docx">DOCX Version</option>
+                        </select>
+                        <a href="#contacts"><div class="btn">Contact</div></a>
                 </div>
 
                 <div class="socials">
