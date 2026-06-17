@@ -50,7 +50,7 @@ body {
   color: var(--text-color);
 }
 
-#darkModeToggle {
+/* #darkModeToggle {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
@@ -62,7 +62,93 @@ body {
     font-size: 2rem;
     background-color: white;   
     
+} */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
 }
+ 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+ 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+ 
+.label {
+  font-weight: bold;
+  transition: opacity 0.4s;
+}
+ 
+.light-label {
+  color: white;
+}
+ 
+.dark-label {
+  color: black;
+}
+ 
+.knob {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s, background-color 0.4s;
+}
+ 
+.knob i {
+  font-size: 16px;
+  color: orange;
+}
+ 
+/* Dark mode styles */
+input:checked + .slider {
+  background-color: #333;
+}
+ 
+input:checked + .slider .knob {
+  transform: translateX(80px);
+   background-color: black;
+}
+ 
+input:checked + .slider .knob i {
+  color: white;
+}
+ 
+input:checked + .slider .dark-label {
+  opacity: 0; /* hide Dark when dark mode */
+}
+ 
+input:not(:checked) + .slider .light-label {
+  opacity: 0; /* hide Light when light mode */
+}
+ 
 
 /* Dark mode theme */
 body.dark-mode {
@@ -73,6 +159,8 @@ body.dark-mode {
     }
     --bg-color: #121212;
     --text-color: #ffffff;
+
+
     .btn{
         border-radius: 3rem;
         padding: 0.5rem 1.5rem;
@@ -97,6 +185,9 @@ body.dark-mode {
         border: 2px solid white;
         transition: 0.2s ease-in-out;
         color: black;
+    }
+    .btn:hover{
+        background-color: turquoise;
     }
 
   
@@ -674,6 +765,12 @@ footer ul li a{
     .grid-language li{
          font-size: 12px;
     }
+    .section-skill{
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-top: 2rem;
+
+    }
 
     .section-title{
         font-size: 2.5rem;
@@ -743,6 +840,11 @@ body .pcmheader{
     
 }
 
+.pcmsBody .modeonoff{
+    margin-top: -7rem;
+}
+
+
 /* --------------------------------------Gatepass Style------------------------------ */
 .gatepassBody{
     background-repeat: no-repeat;            
@@ -765,6 +867,39 @@ body .pcmheader{
     background: linear-gradient(to bottom,rgba(146, 254, 157, 0.8),rgba(0, 201, 255, 0.8));
     
 }
+
+.gatepassBody .modeonoff{
+    margin-top: -7rem;
+}
+
+/* --------------------------------------OSI Style------------------------------ */
+.osiBody{
+    background-repeat: no-repeat;            /* prevents tiling */
+    background-size: cover;                  /* stretches to fill, keeps aspect ratio */
+    background-position: center;             /* centers the image */
+    background-attachment: fixed; 
+    
+}
+body .osiheader{
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    margin-top: 2rem;
+    z-index: 999;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 10px;
+    background: linear-gradient(to bottom,rgba(146, 254, 157, 0.8),rgba(0, 201, 255, 0.8));
+    
+}
+
+.osiBody .modeonoff{
+    margin-top: -7rem;
+}
+
+
 
 
 .projectPicture {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
@@ -33,11 +34,18 @@
         <button class="visit-btn"><a href="https://github.com/Dn0myaR/my-portfolio">Visit GitHub</a></button>
     </header>
     <div class="modeonoff">
-         <button id="darkModeToggle">
-            <!-- <i class="fas fa-sun"></i> -->
-            <i class="fa-regular fa-sun hey"></i>
-        </button>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+            <span class="label light-label">Light</span>
+            <span class="label dark-label">Dark</span>
+            <span class="knob">
+            <i class="fa-regular fa-sun"></i>
+            </span>
+            </span>
+        </label>
     </div>
+    
     <section class="about" id="about">
         <div class="about-container">
             <img src="./Profile Img/mypics2.png" alt="">
@@ -199,8 +207,5 @@
         <div class="copyright">© All right reserve | Raymond Sereño</div>
 
     </footer>
-
-
-    <script src="script.js"></script>
 </body>
 </html>

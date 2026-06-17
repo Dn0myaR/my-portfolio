@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material Gatepass</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body class="gatepassBody" background="./ProjectImg/Gatepass/bgGP.jpg">
+<body class="gatepassBody">
+    <div class="modeonoff">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+            <span class="label light-label">Light</span>
+            <span class="label dark-label">Dark</span>
+            <span class="knob">
+            <i class="fa-regular fa-sun"></i>
+            </span>
+            </span>
+        </label>
+    </div>
     <header class="gatepassheader"><h1>Material Gatepass</h1></header>
+    
     <div class="notes">
         <h5><b>Important Notes:</b> Due to company privacy and confidentiality policies, 
             I am unable to share or publish the actual projects I developed at work. Instead, this portfolio 
@@ -125,11 +139,99 @@
         <div class="lines">
             <hr>
         </div>
+
+        
+        <h2>Status Card</h2>
+        <a href="./ProjectImg/Gatepass/status.png" target="_blank">
+            <img src="./ProjectImg/Gatepass/status.jpg"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        The Status button displays the complete history of a GatePass request, 
+                        showing all status records with timestamps and the names of individuals 
+                        involved at each stage of processing.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Attachmen Display</h2>
+        <a href="./ProjectImg/Gatepass/attachment.jpg" target="_blank">
+            <img src="./ProjectImg/Gatepass/attachment.jpg"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        The Attachment button is displayed only when a request includes an attached file, 
+                        allowing users to view or manage uploaded GatePass documents.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Create Request</h2>
+        <a href="./ProjectImg/Gatepass/loadrms.png" target="_blank">
+            <img src="./ProjectImg/Gatepass/loadrms.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        first way, New GatePass creation can be done by loading materials directly 
+                        from the Request Management System (RMS). By inputting the RMS Code, all material 
+                        details are automatically retrieved—providing a shortcut when the materials already 
+                        have an associated request in RMS.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        
+        <h2>Manual Create Request</h2>
+        <a href="./ProjectImg/Gatepass/ManualCreateRequest.jpg" target="_blank">
+            <img src="./ProjectImg/Gatepass/ManualCreateRequest.jpg"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        The second method of GatePass creation is manual entry, where all details and 
+                        materials are input using the Add Item button. For items not found in the master 
+                        table, the Encode Item function is used. In contrast, the Load RMS option 
+                        represents the first method, which automatically retrieves material details from 
+                        the Request Management System (RMS).
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
     </div>
      <footer>
        <button onclick="window.location.href='index.html#projects'" class="btn-back"><i class="fa-solid fa-backward-step"></i>BACK</button>
         <div class="copyright">© All right reserve | Raymond Sereño</div>
     </footer>
-   
 </body> 
 </html>

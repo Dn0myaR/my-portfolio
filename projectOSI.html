@@ -4,8 +4,383 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Supplies Inventory</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body>
-    <h1>HI</h1>
-</body>
+<body class="osiBody">
+
+    <div class="modeonoff">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+            <span class="label light-label">Light</span>
+            <span class="label dark-label">Dark</span>
+            <span class="knob">
+            <i class="fa-regular fa-sun"></i>
+            </span>
+            </span>
+        </label>
+    </div>
+    <header class="osiheader"><h1>Office Supplies Inventory</h1></header>
+    <div class="notes">
+        <h5><b>Important Notes:</b> Due to company privacy and confidentiality policies, 
+            I am unable to share or publish the actual projects I developed at work. Instead, this portfolio 
+            contains descriptive pages that outline the type of systems I worked on without exposing proprietary 
+            code or sensitive data.
+        </h5>
+    </div>
+    
+    <div class="projectPicture">
+        <h2>Login Page</h2>
+        <a href="./ProjectImg/Office Supplies/login.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/login.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Office Supplies Login Page — Employees can log in without registration. 
+                        The default password is their EmployeeCode, which they may optionally change 
+                        using change password function of the system.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Landing Page</h2>
+        <a href="./ProjectImg/Office Supplies/Landing Page.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/Landing Page.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        The landing page displays all items available for request. On the left side, a category 
+                        list allows users to filter items by type. Beside the search bar, a row of icons represents 
+                        different processes: Item Surrender, Cart, Transactions/Records, Confirmation Access, 
+                        Material Consumption Report, Price Change History, and Resigned Staff (with ongoing requests).
+                        On the right, next to the user avatar, are Notifications (including Request Notifications, 
+                        Stock Request Notifications, and Surrendered Notifications). The clock icon sets the cutoff 
+                        date and time, mirroring the schedule shown at the top center of the page. The clipboard 
+                        icon provides access to staff assignment, confirmation, delivery, and issuance functions.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+
+        <h2>Request Item Dialog</h2>
+        <a href="./ProjectImg/Office Supplies/RequestDialog.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/RequestDialog.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Request Item Dialog   This dialog is displayed when clicking the Cart icon at 
+                        the bottom right of each item. It allows the user to input the quantity and 
+                        purpose of the request. The user can choose Add to Cart to continue selecting 
+                        additional items, or select Send Request to immediately notify the confirmation 
+                        in-charge about the request.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+
+        <h2>Surrendered Items Dialog</h2>
+        <a href="./ProjectImg/Office Supplies/Item Surrender.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/Item Surrender.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Surrendered Items Dialog   This dialog displays all surrendered items in the main table,
+                        with status summaries shown at the top of the page. Users can filter and search 
+                        records for easier tracking. By clicking Surrender Item, the selected items are added 
+                        to the surrender list. The table on the right provides additional information such as 
+                        status, surrendered by, and item description.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+        
+
+
+        <h2>Cart</h2>
+        <a href="./ProjectImg/Office Supplies/cart.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/cart.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Cart Function  The cart displays all items selected for request after setting their 
+                        quantities. Users can review each item, adjust quantities if needed, and specify the 
+                        purpose of the request. From here, they may either continue adding more items or 
+                        proceed to submit the request for confirmation.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+
+        <h2>Transactions/Records</h2>
+        <a href="./ProjectImg/Office Supplies/transactions.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/transactions.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Transactions/Records   This page displays all requested items along with 
+                        their details and current status. Each record includes reference number, 
+                        item information, quantity, total price, date requested, and status updates. 
+                        Users can filter or search transactions for easier tracking. A rating feature 
+                        is also included to evaluate the inventory process, providing feedback on 
+                        efficiency and accuracy.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Rating</h2>
+        <a href="./ProjectImg/Office Supplies/rate.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/rate.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Rating Function  This feature allows users to evaluate the inventory process based 
+                        on defined criteria such as quality, delivery, communication, response to urgent concerns, 
+                        and problem resolution. Ratings are recorded using percentage ranges, with corresponding 
+                        performance levels:
+                        60%–79%: Needs Improvement
+                        80%–89%: Satisfactory
+                        90%–99%: Very Good
+                        100%: Excellent
+                        Users can also provide remarks for each criterion, ensuring that feedback is both quantitative 
+                        and descriptive. This helps track service performance and supports continuous improvement 
+                        in the inventory workflow.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Request Confirmation Access</h2>
+        <a href="./ProjectImg/Office Supplies/confirmation.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/confirmation.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Confirmation Access   This module manages the processing of approved requests by the 
+                        inventory team. Once a request has been approved by the respective department or team, 
+                        it is forwarded here for confirmation and issuance. The interface provides visibility 
+                        into all received requests, their approval dates, requested items, quantities, purposes, 
+                        and current status. Assigned staff can track progress, notify requesters of pending pickups, 
+                        and oversee the completion of issuance and storage activities.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Stock Replenishment Tab</h2>
+        <a href="./ProjectImg/Office Supplies/stockreplenishment.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/stockreplenishment.png"/>
+        </a>
+        <div class="projectImgDesc">
+            <h5>
+                <ul>
+                    <li>
+                        Stock Replenishment Tab   This section handles inventory requests for replenishing items. 
+                        Once a replenishment request is submitted, it is processed and tracked here. The Billing 
+                        team is in charge of managing this module, ensuring that requests are properly endorsed, 
+                        approved, and delivered. The interface provides detailed records including request codes, 
+                        dates, requester information, items, quantities, purposes, and current status, allowing for 
+                        transparent monitoring of the replenishment workflow.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Stock Monitoring</h2>
+        <a href="./ProjectImg/Office Supplies/stockmonitoring.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/stockmonitoring.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Stock Monitoring Tab   This section provides a comprehensive view of 
+                        inventory levels and item statuses. It tracks selected items for replenishment,
+                        showing details such as item codes, descriptions, unit of measure, stock 
+                        quantity, total issued, confirmed deliveries, received secondhand items, 
+                        and undelivered quantities. Items flagged with a Re-Order status indicate
+                        the need for replenishment, ensuring that the inventory team can proactively
+                        manage supply levels and avoid shortages.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Stock Monitoring Details</h2>
+        <a href="./ProjectImg/Office Supplies/stockdetails.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/stockdetails.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        This section displays the detailed stock history of a specific item, organized 
+                        by cut-off periods. Each record shows the previous stock, delivered quantity, 
+                        received secondhand quantity, issued quantity, and resulting stock within the 
+                        defined cut-off date range. The system allows filtering by year and month, as well 
+                        as setting a cut-off start day, ensuring accurate monitoring of stock movement over 
+                        time. This feature provides transparency in inventory flow and helps identify 
+                        when replenishment is required.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+
+        <h2>Item Request Details</h2>
+        <a href="./ProjectImg/Office Supplies/requestmonitoring.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/requestmonitoring.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Per Item Records   This section consolidates all records related to a specific item, 
+                        providing a detailed view for accurate inventory checking. It tracks issued, 
+                        delivered, and received secondhand materials within defined cut-off periods, 
+                        ensuring transparency in item movement. Each record includes reference numbers, 
+                        requester details, item descriptions, quantities, and dates, allowing the 
+                        inventory team to verify requests and monitor stock flow more effectively. This 
+                        feature supports precise auditing and strengthens overall inventory control.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Cost Record</h2>
+        <a href="./ProjectImg/Office Supplies/cost.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/cost.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        This module provides a detailed breakdown of manpower and cost consumption across 
+                        departments, teams, and individual employees. Users can filter records by team or 
+                        employee, allowing precise monitoring of resource allocation and expenses. The 
+                        dashboard summarizes overall departmental costs while also showing itemized consumption 
+                        per staff member, ensuring transparency and accountability in inventory usage and 
+                        financial tracking.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+        <div class="lines">
+            <hr>
+        </div>
+
+        <h2>Consumption Report</h2>
+        <a href="./ProjectImg/Office Supplies/consumption.png" target="_blank">
+            <img src="./ProjectImg/Office Supplies/consumption.png"/>
+        </a>
+        <div class="projectImgDesc">
+            
+            <h5>
+                <ul>
+                    <li>
+                        Budget tracking — seeing which months drive the highest expenses.
+                    </li>
+                     <li>
+                        Inventory planning — identifying when to replenish stock before shortages occur.
+                    </li>
+                     <li>
+                        Department analysis — comparing usage across teams for accountability.
+                    </li>
+                     <li>
+                        Forecasting needs — predicting future demand based on past consumption patterns.
+                    </li>
+                </ul>
+            </h5> 
+        </div>
+
+       
+    </div>
+     <footer>
+       <button onclick="window.location.href='index.html#projects'" class="btn-back"><i class="fa-solid fa-backward-step"></i>BACK</button>
+        <div class="copyright">© All right reserve | Raymond Sereño</div>
+    </footer>
+</body> 
 </html>

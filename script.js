@@ -45,51 +45,88 @@ navLinks1.forEach(link => {
 
 
 //Dark mode
-// const toggle = document.getElementById('darkModeToggle');
-// const icon = toggle.querySelector('i');
 
-// if (localStorage.getItem('theme') === 'dark') {
-//     body.classList.add('dark-mode');
-// }
-// toggle.addEventListener('click', () => {
-//     document.body.classList.toggle('dark-mode');
-//     localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
 
-//     if (document.body.classList.contains('dark-mode')) {
-//         icon.classList.remove('fa-sun');
-//         icon.classList.add('fa-moon');
-//     } else {
-//         icon.classList.remove('fa-moon');
-//         icon.classList.add('fa-sun');
-//     }
-// });
-const body = document.body;
-const toggle = document.getElementById('darkModeToggle');
-const icon = toggle.querySelector('i');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById('darkModeToggle');
+  const knobIcon = document.querySelector('.knob i');
+  const body = document.body;
 
-// Load saved preference on page load
-if (localStorage.getItem('theme') === 'dark') {
+  // Restore theme
+  if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-} else {
-    body.classList.remove('dark-mode');
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-}
-
-// Toggle on click
-toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-
-    if (body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+    if (toggle) {
+      toggle.checked = true;
+      if (knobIcon) knobIcon.classList.replace('fa-sun', 'fa-moon');
     }
+  }
+
+  if (toggle) {
+    toggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode', toggle.checked);
+      localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+
+      if (knobIcon) {
+        if (toggle.checked) {
+          knobIcon.classList.replace('fa-sun', 'fa-moon');
+        } else {
+          knobIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+      }
+    });
+  }
 });
+
+
+// const toggle = document.getElementById('darkModeToggle');
+// const knobIcon = document.querySelector('.knob i');
+// const body = document.body;
+
+// // Load saved theme
+// if (localStorage.getItem('theme') === 'dark') {
+//   body.classList.add('dark-mode');
+//   toggle.checked = true;
+//   knobIcon.classList.replace('fa-sun', 'fa-moon');
+// }
+
+// toggle.addEventListener('change', () => {
+//   body.classList.toggle('dark-mode', toggle.checked);
+//   localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+
+//   if (toggle.checked) {
+//     knobIcon.classList.replace('fa-sun', 'fa-moon');
+//   } else {
+//     knobIcon.classList.replace('fa-moon', 'fa-sun');
+//   }
+// });
+
+
+
+// const toggle = document.getElementById('darkModeToggle');
+// const knobIcon = document.querySelector('.knob i');
+// const body = document.body;
+
+// // Load saved preference on page load
+// if (localStorage.getItem('theme') === 'dark') {
+//   body.classList.add('dark-mode');
+//   toggle.checked = true;
+//   knobIcon.classList.remove('fa-sun');
+//   knobIcon.classList.add('fa-moon');
+// }
+
+// toggle.addEventListener('change', () => {
+//   body.classList.toggle('dark-mode', toggle.checked);
+
+//   // ✅ Save to localStorage
+//   localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+
+//   if (toggle.checked) {
+//     knobIcon.classList.remove('fa-sun');
+//     knobIcon.classList.add('fa-moon');
+//   } else {
+//     knobIcon.classList.remove('fa-moon');
+//     knobIcon.classList.add('fa-sun');
+//   }
+// });
 
 
