@@ -582,9 +582,6 @@ section{
     justify-content: center;
 }
 
-/* .formContact{
-    gap: 5rem;
-} */
 
 
 
@@ -724,9 +721,9 @@ footer ul li a{
     .input-box input::placeholder{
         font-size: 1.5rem;
     }
-    .info-box i{
+    /* .info-box i{
         display: none;
-    }
+    } */
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
@@ -823,6 +820,9 @@ footer ul li a{
         width: 300px;
         font-size: 12px;
         
+    }
+    .contact-email{
+        margin-top: -10px;
     }
     
     .input-box input::placeholder{
