@@ -730,6 +730,27 @@ footer ul li a{
     .experience-info img{
         width: 60vw;
     }
+
+     /* pcmanagement */
+    .pcmheader{
+        font-size: 10px;
+        padding: 5px;
+    }
+    /* end pcmanagement */
+
+
+    /* gatepass */
+    .gatepassheader{
+        font-size: 10px;
+        padding: 5px;
+    }
+    /* end gatepass */
+
+    .osiheader{
+        font-size: 10px;
+        padding: 5px;
+    }
+
 }
 @media(max-width:600px){
     body .mainheader #menu-icon{
@@ -847,6 +868,8 @@ footer ul li a{
     }
 
 
+   
+
 }
 
 
@@ -858,7 +881,7 @@ footer ul li a{
     background-attachment: fixed; 
     
 }
-body .pcmheader{
+.pcmheader{
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -913,7 +936,7 @@ body .pcmheader{
     background-attachment: fixed; 
     
 }
-body .osiheader{
+.osiheader{
     position: fixed;
     top: 1rem;
     left: 50%;

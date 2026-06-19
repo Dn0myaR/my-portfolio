@@ -1,46 +1,73 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
 
-menuIcon.onclick = () => {
-    navLinks.classList.toggle('active')
-}
 
-const sections = document.querySelectorAll("section");
-const navLinks1 = document.querySelectorAll(".nav-links li a");
-const underColor = document.querySelectorAll(".nav-links li a");
+  if (window.location.pathname.endsWith("index.html")) {
+    //menu activity
+    const menuIcon = document.querySelector('#menu-icon');
+    const navLinks = document.querySelector('.nav-links');
 
-// Scrollspy effect
-window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
-        }
+    menuIcon.onclick = () => {
+        navLinks.classList.toggle('active')
+    }
+        
+ 
+    // Scroll effect
+    const sections = document.querySelectorAll("section");
+    const navLinks1 = document.querySelectorAll(".nav-links li a");
+    const underColor = document.querySelectorAll(".nav-links li a");
+
+    // Scrollspy effect
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+            }
+        });
+
+        navLinks1.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+            }
+        });
+        underColor.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+            }
+        });
     });
 
+    // Click effect (instant feedback)
     navLinks1.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
+      link.addEventListener("click", () => {
+        navLinks1.forEach(l => l.classList.remove("active"));
         link.classList.add("active");
-        }
+      });
     });
-    underColor.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-        }
-    });
-});
 
-// Click effect (instant feedback)
-navLinks1.forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
+
+    //send email
+    // emailjs.init("IzAY2DUjGGn7SHua3"); 
+    (function(){
+        emailjs.init("IzAY2DUjGGn7SHua3"); 
+    })();
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_qwf78a4', 'template_ilh84t2', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.querySelector('#contact-form textarea[name="message"]').value = '';
+        }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+        });
+    });
+  }
+
+
 
 
 
@@ -77,18 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//send email
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  emailjs.sendForm('service_qwf78a4', 'template_ilh84t2', this)
-    .then(function() {
-      alert('Message sent successfully!');
-    }, function(error) {
-      alert('Failed to send message: ' + JSON.stringify(error));
-    });
-});
 
 
 // const toggle = document.getElementById('darkModeToggle');
