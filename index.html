@@ -173,7 +173,8 @@
             <h2 class="section-title">Connect with me</h2>
             <h3 class="section-dropmsg">Let’s chat. Drop a message!</h3>
 
-            <form action="connectwithme.php" method="POST" > 
+            <!-- <form action="connectwithme.php" method="POST" >  -->
+            <form id="contact-form">
                 <div class="contact-name">
                     <input type="text" name="name" placeholder="Please input your name" required>
                 </div>
@@ -207,5 +208,12 @@
         <div class="copyright">© All right reserve | Raymond Sereño</div>
 
     </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("IzAY2DUjGGn7SHua3"); 
+        })();
+    </script>
 </body>
 </html>
