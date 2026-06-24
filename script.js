@@ -2,12 +2,10 @@
 
   if (window.location.pathname.endsWith("index.html")) {
     //menu activity
-    const menuIcon = document.querySelector('#menu-icon');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuIcon.onclick = () => {
-        navLinks.classList.toggle('active')
-    }
+   
+  
+      
+  
         
  
     // Scroll effect
@@ -71,13 +69,20 @@
 
 
 
-//Dark mode
-
 
 document.addEventListener("DOMContentLoaded", () => {
+  // #menu
+  const menuIcon = document.querySelector('#menu-icon');
+  const navLinks = document.querySelector('.nav-links');
+  menuIcon.onclick = () => {
+    navLinks.classList.toggle('active');
+  };
+
+  //Dark mode
   const toggle = document.getElementById('darkModeToggle');
   const knobIcon = document.querySelector('.knob i');
   const body = document.body;
+
 
   // Restore theme
   if (localStorage.getItem('theme') === 'dark') {
